@@ -1,0 +1,111 @@
+/* Support Links Block */
+.support-links {
+  --sl-bg: #fff;
+  --sl-text: #000;
+  --sl-desc-color: #000;
+  --sl-heading-size: 33px;
+  --sl-title-size: 18px;
+  --sl-desc-size: 14px;
+  --sl-cta-size: 14px;
+  --sl-icon-size: 40px;
+  --sl-card-padding: 30px 20px;
+
+  text-align: center;
+  background: var(--sl-bg);
+  color: var(--sl-text);
+  padding: 20px 0 16px;
+}
+
+/* Heading row */
+.support-links > div:first-child {
+  margin-bottom: 16px;
+}
+
+.support-links h2 {
+  font-size: var(--sl-heading-size);
+  font-weight: 600;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Card rows */
+.support-links > div:not(:first-child) {
+  padding: var(--sl-card-padding);
+}
+
+/* Icon image (after decorate merges it into text cell) */
+.support-links > div:not(:first-child) picture {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.support-links > div:not(:first-child) img {
+  width: var(--sl-icon-size);
+  height: auto;
+  display: inline-block;
+}
+
+.support-links h3 {
+  font-size: var(--sl-title-size);
+  font-weight: 700;
+  margin: 8px 0 6px;
+}
+
+.support-links p {
+  font-size: var(--sl-desc-size);
+  color: var(--sl-desc-color);
+  line-height: 1.43;
+  margin: 0 0 8px;
+}
+
+/* CTA link styling */
+main .support-links a:any-link {
+  font-size: var(--sl-cta-size);
+  font-weight: 700;
+  color: var(--sl-text);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+main .support-links a:hover {
+  text-decoration: underline;
+}
+
+/* Button container reset for CTA links */
+main .support-links .button-container {
+  display: block;
+  margin-top: 8px;
+}
+
+main .support-links a.button:any-link {
+  font-size: var(--sl-cta-size);
+  font-weight: 700;
+  color: var(--sl-text);
+  text-decoration: none;
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media (width >= 900px) {
+  .support-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Heading spans full width */
+  .support-links > div:first-child {
+    width: 100%;
+  }
+
+  /* Cards side by side */
+  .support-links > div:not(:first-child) {
+    flex: 1 1 0;
+    max-width: 33.333%;
+  }
+}
