@@ -1,0 +1,147 @@
+/* Product Carousel Block */
+.product-carousel {
+  --carousel-bg: #fff;
+  --carousel-card-bg: #f8f8f8;
+  --carousel-text: #000;
+  --carousel-btn-bg: #e22128;
+  --carousel-btn-text: #fff;
+  --carousel-gap: 24px;
+  --carousel-card-img-height: 184px;
+  --carousel-price-size: 17px;
+  --carousel-title-size: 18px;
+
+  padding: 0;
+}
+
+/* Heading row */
+.product-carousel > div:first-child {
+  margin-bottom: 16px;
+}
+
+.product-carousel h2 {
+  font-size: 28px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--carousel-text);
+  margin: 0;
+  line-height: 1.2;
+}
+
+@media (width >= 900px) {
+  .product-carousel h2 {
+    font-size: 33px;
+  }
+}
+
+/* Cards container — horizontal scroll */
+.product-carousel .carousel-track {
+  display: flex;
+  gap: var(--carousel-gap);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 8px;
+}
+
+.product-carousel .carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual card */
+.product-carousel .carousel-card {
+  flex: 0 0 auto;
+  width: 317px;
+  background: var(--carousel-card-bg);
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card image */
+.product-carousel .carousel-card picture {
+  display: block;
+  height: var(--carousel-card-img-height);
+  overflow: hidden;
+}
+
+.product-carousel .carousel-card picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Card body */
+.product-carousel .card-body {
+  padding: 12px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.product-carousel .card-body h3 {
+  font-size: var(--carousel-title-size);
+  font-weight: 600;
+  color: var(--carousel-text);
+  margin: 0 0 4px;
+  line-height: 1.25;
+}
+
+/* Price row */
+.product-carousel .card-body .price {
+  font-size: var(--carousel-price-size);
+  color: var(--carousel-text);
+  margin: 0 0 12px;
+}
+
+.product-carousel .card-body .price del {
+  text-decoration: line-through;
+  margin-right: 4px;
+}
+
+/* Add to cart button */
+.product-carousel .card-body .cta {
+  margin-top: auto;
+  margin-left: -16px;
+  margin-right: -16px;
+  margin-bottom: -16px;
+}
+
+.product-carousel .card-body .cta .button-wrapper {
+  margin: 0;
+}
+
+main .product-carousel .card-body .cta a.button:any-link {
+  display: block;
+  width: 100%;
+  background: var(--carousel-btn-bg);
+  color: var(--carousel-btn-text);
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 24px;
+  border: 1px solid var(--carousel-btn-bg);
+  border-radius: 0;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+main .product-carousel .card-body .cta a.button:any-link:hover {
+  background: #c91a20;
+  border-color: #c91a20;
+}
+
+/* Responsive: smaller screens */
+@media (width < 768px) {
+  .product-carousel .carousel-card {
+    width: 260px;
+  }
+
+  .product-carousel h2 {
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
+}
