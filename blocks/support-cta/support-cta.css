@@ -1,0 +1,91 @@
+/* Support CTA block – gradient banner with 3 columns */
+main > .section > .support-cta-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+/* Remove section margin for full-bleed */
+main > .section:has(.support-cta-wrapper) {
+  margin: 0;
+}
+
+.support-cta {
+  --support-cta-gradient: linear-gradient(262deg, rgb(77, 128, 230), rgb(197, 77, 112) 53%, rgb(204, 66, 93) 63%, rgb(225, 33, 40));
+  --support-cta-text: #fff;
+  --support-cta-padding: 56px;
+  --support-cta-font-size: 14px;
+
+  background: var(--support-cta-gradient);
+  color: var(--support-cta-text);
+  padding: var(--support-cta-padding);
+  font-size: var(--support-cta-font-size);
+}
+
+.support-cta h3 {
+  font-size: var(--support-cta-font-size);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  color: var(--support-cta-text);
+}
+
+.support-cta p {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  color: var(--support-cta-text);
+  font-size: var(--support-cta-font-size);
+  line-height: 1.5;
+}
+
+/* Button overrides – secondary style for <em><a> */
+main .support-cta a.button:any-link {
+  background: transparent;
+  border: 1px solid var(--support-cta-text);
+  border-radius: 0;
+  color: var(--support-cta-text);
+  padding: 10px;
+  font-size: var(--support-cta-font-size);
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+main .support-cta a.button:any-link:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--support-cta-text);
+}
+
+main .support-cta .button-wrapper {
+  margin: 8px 0 0;
+}
+
+/* Divider between columns (added by JS) */
+.support-cta .cta-divider {
+  display: none;
+}
+
+@media (width >= 900px) {
+  .support-cta > div {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .support-cta > div > div:not(.cta-divider) {
+    flex: 1;
+    padding: 0 24px;
+  }
+
+  .support-cta .cta-divider {
+    display: block;
+    width: 1px;
+    min-height: 73px;
+    background: rgba(255, 255, 255, 0.6);
+    flex: 0 0 1px;
+    margin-top: 14px;
+  }
+}
