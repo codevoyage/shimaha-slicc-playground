@@ -1,0 +1,12 @@
+:root {
+  --heading-font-family: "ProximaNova", "Kumbh Sans", -apple-system, "Segoe UI", sans-serif;
+  --body-font-family: "ProximaNova", "Kumbh Sans", -apple-system, "Segoe UI", sans-serif;
+  --background-color: rgb(255, 255, 255);
+  --text-color: rgb(33, 37, 41);
+  --link-color: rgb(75, 82, 83);
+  --link-hover-color: rgb(33, 37, 41);
+  --section-padding: 0px;
+  --nav-height: 36px;
+}
+
+html, body { overflow: auto !important; }
